@@ -1,0 +1,9 @@
+core_cm0.h:623:22:__NVIC_EnableIRQ	16	static
+core_cm0.h:730:22:__NVIC_SetPriority	24	static
+main.c:14:6:BtnSurvey	16	static
+main.c:45:6:SetValueIndicator	24	static
+main.c:121:6:SetNumberIndicator	16	static
+main.c:156:11:ConvertToTimeFormat	24	static
+main.c:168:9:GetSamplingStep	8	static
+main.c:188:6:TIM16_IRQHandler	8	static
+main.c:229:5:main	8	static
