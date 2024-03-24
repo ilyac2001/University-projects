@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="700.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.modelrepairman.VIewController">
+   <children>
+      <FlowPane layoutY="27.0" prefHeight="700" prefWidth="1400">
+         <children>
+            <FlowPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="290.0" text="Исходные данные" />
+                  <Label prefHeight="18.0" prefWidth="30.0" text="tH0" />
+                  <TextField fx:id="tH0" prefHeight="26.0" prefWidth="255.0" />
+                   <Label prefHeight="18.0" prefWidth="30.0" text="t0" />
+                   <TextField fx:id="t0" prefHeight="26.0" prefWidth="255.0" />
+                   <Label prefHeight="18.0" prefWidth="30.0" text="N" />
+                   <TextField fx:id="N" prefHeight="26.0" prefWidth="253.0" />
+                   <Label prefHeight="18.0" prefWidth="30.0" text="C" />
+                   <TextField fx:id="C_var1" prefHeight="26.0" prefWidth="85.0" />
+                   <TextField fx:id="C_var2" prefHeight="26.0" prefWidth="85.0" />
+                   <TextField fx:id="C_var3" prefHeight="26.0" prefWidth="85.0" />
+                   <Label prefHeight="18.0" prefWidth="30.0" text="S1" />
+                   <TextField fx:id="S1" prefHeight="26.0" prefWidth="255.0" />
+                   <Label prefHeight="18.0" prefWidth="30.0" text="S" />
+                   <TextField fx:id="S" prefHeight="26.0" prefWidth="255.0" />
+                  <Button fx:id="btn_result" mnemonicParsing="false" onAction="#GetResult" prefHeight="62.0" prefWidth="285.0" text="Расчитать" />
+                  <Label text="Точность расчётов" />
+                  <TextField fx:id="decimal_point" prefHeight="26.0" prefWidth="182.0"  onKeyTyped="#handleTextChanged"/>
+               </children>
+            </FlowPane>
+            <TableView fx:id="table" maxHeight="650.0" prefHeight="256.0" prefWidth="1106.0">
+              <columns>
+                 <TableColumn prefWidth="75.0" text="C">
+                     <cellValueFactory>
+                         <PropertyValueFactory property="C" />
+                     </cellValueFactory>
+                 </TableColumn>
+                 <TableColumn prefWidth="75.0" text="P0">
+                     <cellValueFactory>
+                         <PropertyValueFactory property="P0" />
+                     </cellValueFactory>
+                 </TableColumn>
+                 <TableColumn prefWidth="75.0" text="Q">
+                     <cellValueFactory>
+                         <PropertyValueFactory property="Q" />
+                     </cellValueFactory>
+                 </TableColumn>
+                 <TableColumn prefWidth="75.0" text="L">
+                     <cellValueFactory>
+                         <PropertyValueFactory property="L" />
+                     </cellValueFactory>
+                 </TableColumn>
+                  <TableColumn prefWidth="75.0" text="U">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="U" />
+                      </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="75.0" text="po">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="po" />
+                      </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="75.0" text="n">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="n" />
+                      </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="75.0" text="pe">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="pe" />
+                      </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="75.0" text="W">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="W" />
+                      </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="75.0" text="Tp">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="Tp" />
+                      </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="75.0" text="Tц">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="Tc" />
+                      </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="75.0" text="pe/p0">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="pe_p0" />
+                      </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="75.0" text="Y">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="Y" />
+                      </cellValueFactory>
+                  </TableColumn>
+              </columns>
+            </TableView>
+            <LineChart fx:id="chart" prefHeight="400.0" prefWidth="1400">
+              <xAxis>
+                  <NumberAxis label="Ремонтники" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis label="" />
+              </yAxis>
+            </LineChart>
+             <HBox alignment="TOP_CENTER" prefHeight="24.0" prefWidth="1400.0" spacing="50">
+               <children>
+                   <RadioButton fx:id="radioButtonY" mnemonicParsing="false" text="Y" />
+                   <RadioButton fx:id="radioButtonL" mnemonicParsing="false" text="L" />
+                   <RadioButton fx:id="radioButtonTp" mnemonicParsing="false" text="Tp" />
+               </children>
+             </HBox>
+         </children>
+      </FlowPane>
+      <Button fx:id="btn_about_proframm" layoutY="1.0" mnemonicParsing="false" onAction="#OpenNewStage" text="О программе" />
+   </children>
+</AnchorPane>
