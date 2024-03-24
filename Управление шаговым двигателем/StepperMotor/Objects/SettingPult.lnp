@@ -1,0 +1,12 @@
+--cpu Cortex-M0
+".\objects\main.o"
+".\objects\timer.o"
+".\objects\motor.o"
+".\objects\led.o"
+".\objects\btn.o"
+".\objects\startup_stm32f072xb.o"
+".\objects\system_stm32f0xx.o"
+--strict --scatter ".\Objects\SettingPult.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\SettingPult.map" -o .\Objects\SettingPult.axf
