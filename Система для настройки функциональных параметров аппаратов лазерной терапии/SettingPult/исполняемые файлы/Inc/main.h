@@ -42,11 +42,11 @@ typedef union
 	struct
 	{
 		unsigned package_accepted_swi	 :1;	//Флаг приёма передачи пакета, 1 - принят обрабатывается, 0 - запрет на принятие, подготовка и отправка ответа
-		unsigned package_send_usb		 :1;
+		unsigned package_send_usb	 :1;
 		unsigned package_accepted_usb	 :1;
-		unsigned LCDError				 :1;	//Флаг, что произошла ошибка передачи пакета контроллеру дисплея, 1 -> нужно инициализировать дисплей заного
+		unsigned LCDError		 :1;	//Флаг, что произошла ошибка передачи пакета контроллеру дисплея, 1 -> нужно инициализировать дисплей заного
 	};
-	unsigned char flag_reg;							// Регистр флагов
+	unsigned char flag_reg;				// Регистр флагов
 } TypeFlag;
 /* USER CODE END ET */
 
